@@ -1,0 +1,125 @@
+@import './variables';
+
+.video-container {
+    position: relative;
+    margin-bottom: 10px;
+    user-select: none;
+    overflow: hidden;
+    video {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    video:hover ~ .controls{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .controls {
+        width: 100%;
+        transition: all .5s ease;
+        display: flex;
+        position: absolute;
+        &:hover {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        background-color: black;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        opacity: 0;
+        align-items: center;
+        padding: 15px 0;
+        color: #ffffff;
+        transform: translateY(100%);
+        justify-content: center;
+        .play-pause-controller {
+            span {
+                font-size: 64px;
+                cursor: pointer;
+            }
+            margin-right: 20px;
+            margin-top: 25px;
+        }
+        .progress-controller {
+            width: 80%;
+            .duration-progress {
+                align-items: center;
+                width: 100%;
+                margin-bottom: 5px;
+                .time {
+                    margin-left: auto;
+                    margin-top: 10px;
+                    display: block;
+                    width: fit-content;
+                    font-family: firma;
+                    font-size: 15px;
+                }
+                .progress-bar {
+                    position: relative;
+                    width: 100%;
+                    height: 10px;
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin-right: 5px;
+                    input[type="range"] {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        position: absolute;
+                        left: 0;
+                        z-index: 99;
+                        cursor: pointer;
+                    }
+                    .current_progress {
+                        height: 100%;
+                        position: absolute;
+                        left: 0%;
+                        top: 0;
+                        background: $button-background;
+                    }
+                }
+            }
+            .volume-progress {
+                display: flex;
+                align-items: center;
+                width: 150px;
+                .volume-icon {
+                    margin-right: 5px;
+                    margin-left: auto;
+                    span {
+                        line-height: 28px;
+                        cursor: pointer;
+                    }
+                }
+                .volume-progressbar {
+                    width: 100%;
+                    position: relative;
+                    height: 10px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    background-color: #ffffff;
+                    input[type="range"] {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        position: absolute;
+                        left: 0;
+                        z-index: 99;
+                        cursor: pointer;
+                        
+                    }
+                    .current_progress {
+                        height: 100%;
+                        position: absolute;
+                        left: 0%;
+                        top: 0;
+                        background: $button-background;
+                    }
+                }
+            }
+        }
+    }
+}

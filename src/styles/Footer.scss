@@ -1,0 +1,173 @@
+@import './variables';
+@import './regularFirma';
+
+footer {
+    width: 100%;
+    background-color: $footer-background;
+    color: #fff;
+    display: inline-block;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+    .left-side {
+        color: $footer-second-color;
+        p:nth-child(1) {
+            font-family: firmaBlack;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        p:nth-child(2) {
+            font-family: firma;
+            font-weight: 400;
+        }
+    }
+    .input-side {
+        .input-control 
+        {
+            display: flex;
+            input {
+                display: block;
+                margin-right: 15px;
+                border: none;
+                background-color: #000;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 18px;
+                color: #fff;
+                font-family: firma;
+                font-weight: 400;
+                height: 100%;
+            }
+
+            button {
+                display: block;
+                outline: none;
+                font-size: 18px;
+                font-family: firma;
+                padding: 15px;
+                cursor: pointer;
+                border-radius: 10px;
+                border: none;
+                background-color: $footer-button-background;
+                color: $footer-first-color;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+footer {
+    .links {
+        width: 85%;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 100px;
+        margin-bottom: 5px;
+        -webkit-box-shadow: 0px 4px 2px -3px #FEFAE2; 
+        box-shadow: 0px 4px 2px -3px #FEFAE2;
+        .link {
+            h1 {
+                font-family: firmaBlack;
+                font-weight: 400;
+                font-size: 18px;
+                color: $footer-second-color;
+                margin-bottom: 15px;
+            }
+            .links-container {
+                p {
+                    margin-bottom: 15px;
+                    a {
+                        font-family: figma;
+                        font-size: 18px;
+                        font-weight: 400;
+                        text-decoration: none;
+                        color: $footer-second-color;
+                        &:hover {
+                            color: $footer-first-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rights {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    p:nth-child(1) {
+        color: $footer-first-color;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: firma;
+    }
+    p:nth-child(2) {
+        color: $footer-first-color;
+        font-size: 14px;
+        font-family: firma;
+        font-weight: 400;
+        a {
+            color: $footer-second-color;
+            font-family: firma;
+            font-weight: 600;
+            &:hover {
+                color: $footer-first-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .rights {
+        flex-direction: column;
+        width: 95%;
+        p:nth-child(1) {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    }
+    footer {
+        .links {
+            width: 85%;
+            flex-direction: column;
+            padding-bottom: 50px;
+            .link {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .news-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .input-side {
+            margin-top: 10px;
+            .input-control 
+            {
+                input {
+                    padding: 10px;
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+    
+                button {
+                    font-size: 12px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
